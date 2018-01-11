@@ -25,12 +25,12 @@ public class Configldap {
             env.put(Context.SECURITY_CREDENTIALS, pwd);
             env.put(Context.PROVIDER_URL, "ldap://192.168.8.105:389");
             LdapContext ctx = new InitialLdapContext(env,null);
-            System.out.println("SE CONECTO ESTA WEBADA.");
+            System.out.println("SE CONECTÓ");
             ctx.close();
             flag = true;
         } catch (NamingException e) {
             flag = false;
-            System.out.println("FALLÓ ESTA WEBADA.");
+            System.out.println("FALLÓ CONEXIÓN");
             e.printStackTrace();
         }
 
